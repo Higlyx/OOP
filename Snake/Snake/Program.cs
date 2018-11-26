@@ -10,26 +10,25 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1, 3, '*');
+            Console.SetBufferSize(120, 30);
+            Horizontal Top = new Horizontal(1, 119, 1, '#');
+            Horizontal Bottom = new Horizontal(1, 119, 29, '#');
+            Vertical Left = new Vertical(1, 0, 28, '#');
+            Vertical Right = new Vertical(119, 0, 28, '#');
+            Top.Draw();
+            Bottom.Draw();
+            Left.Draw();
+            Right.Draw();
 
-            Point p2 = new Point(4, 5, '#');
+            Point p1 = new Point(5, 5, '*');
+            p1.Draw();
+            Point p2 = new Point(6, 8, '*');
+            p2.Draw();
+            Point p3 = new Point(10, 5, '*');
+            p3.Draw();
 
-            Point p3 = new Point(3, 2, '^');
 
-            Point p4 = new Point(5, 1, '&');
-
-            List<Point> pList = new List<Point>();
-            pList.Add(p1);
-            pList.Add(p2);
-            pList.Add(p3);
-            pList.Add(p4);
-
-            foreach( Point i in pList)
-            {
-                i.Draw();
-            }
-
-            Console.ReadLine();
+            Console.ReadLine();//Написать класс горизонтальных линий и класс вертикальных
         }
     }
 }
